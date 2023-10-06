@@ -1,22 +1,26 @@
 package com.iuh.phu.se.dao;
 
 import com.iuh.phu.se.models.Candidate;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
-@Service
+@Component
 public class CandidateDao extends AbtrastDao<Candidate, Long> {
+    private JdbcTemplate jdbcTemplate;
+    private DataSource dataSource;
 
-    @Autowired
     public CandidateDao(DataSource dataSource) {
-        super(dataSource);
+        this.dataSource = dataSource;
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+
     }
 
     @Override

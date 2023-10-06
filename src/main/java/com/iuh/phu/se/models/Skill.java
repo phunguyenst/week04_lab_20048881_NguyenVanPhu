@@ -4,15 +4,14 @@ public class Skill {
     private long skill_id;
     private String skillName;
 
-    private String skillDescripttion;
+
 
     public Skill() {
     }
 
-    public Skill(long skill_id, String skillName, String skillDescripttion) {
+    public Skill(long skill_id, String skillName) {
         this.skill_id = skill_id;
         this.skillName = skillName;
-        this.skillDescripttion = skillDescripttion;
     }
 
     public long getSkill_id() {
@@ -31,20 +30,12 @@ public class Skill {
         this.skillName = skillName;
     }
 
-    public String getSkillDescripttion() {
-        return skillDescripttion;
-    }
-
-    public void setSkillDescripttion(String skillDescripttion) {
-        this.skillDescripttion = skillDescripttion;
-    }
 
     @Override
     public String toString() {
         return "Skill{" +
                 "skill_id=" + skill_id +
                 ", skillName='" + skillName + '\'' +
-                ", skillDescripttion='" + skillDescripttion + '\'' +
                 '}';
     }
 }
