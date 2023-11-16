@@ -7,7 +7,7 @@
 - Sử dụng `JdbcTemplate` để thao tác.<br>
 - Làm quen với `Unit Test`. <br>
   <br>
-- ![img.png](img.png)
+![img.png](img.png)
 <br>
 <br>
 **Diagram:**
